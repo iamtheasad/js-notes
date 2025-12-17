@@ -2475,9 +2475,32 @@ function createInputBox(value) {
 </html>
 ```
 
-## Some Random Topic
+## Reduce Method
 
-### When to use reducer method on array?
+```
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+const balance = movements.reduce(function (acc, cur, i, arr) {
+  console.log(`Iteration ${i}: ${acc} curr: ${cur}`);
+  return acc - cur;
+}, 0);
+
+console.log(balance);
+
+let balance2 = 0;
+for (const mov of movements) balance2 += mov;
+console.log(balance2);
+
+console.log(movements);
+const max = movements.reduce((acc, mov) => {
+  if (acc > mov) return acc;
+  else return mov;
+}, movements[0]);
+
+console.log(max);
+```
+
+### When to use reduce method on array?
 
 When to Use the reduce() Method
 As shown above, the reduce() method is recommended when you need to have a single value returned from iterating over your array.
@@ -2490,4 +2513,3 @@ Removing duplicates from an array
 The single value returned by the method can also be an array of objects, therefore containing multiple values.
 
 You’ve seen how to sum values in the previous section, so let’s see some examples of grouping items and removing duplicates next.
-
