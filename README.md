@@ -14,6 +14,14 @@
 
 ## Javascript Basic
 
+### Multiline JS Comment
+
+```
+/*/------------------------------
+Enter Text Here
+------------------------------/*/
+```
+
 ### Home
 
 - JavaScript is the world's most popular programming language.
