@@ -2823,3 +2823,123 @@ console.log(dogsGroupByOwners);
 const dogsSorted = dogs.toSorted((a, b) => a.recFood - b.recFood);
 console.log(dogsSorted);
 ```
+
+## Numbers, Dates, Internationalization and Timers
+
+- Important methods should revise in again and again
+
+```
+
+console.log(Number.parseInt('e34', 10));
+console.log(Number.parseFloat('23.5px'));
+
+console.log(Number.isNaN(23));
+console.log(Number.isNaN('23'));
+console.log(Number.isNaN(+'23'));
+console.log(Number.isNaN(23 / 0));
+
+console.log(Number.isFinite(20));
+console.log(Number.isFinite('20px'));
+console.log(Number.isFinite(+'20px'));
+console.log(Number.isFinite('20'));
+console.log(Number.isFinite(20 / 0));
+
+console.log(Number.isInteger('20.5'));
+
+console.log(Math.sqrt(25));
+console.log(25 ** (1 / 2));
+
+// Rounding Integers
+
+console.log(Math.round(23.26));
+console.log(Math.round(23.99));
+
+console.log(Math.ceil(88.2));
+console.log(Math.ceil(88.5));
+
+console.log(Math.floor(77.2));
+console.log(Math.floor(77.5));
+
+console.log(Math.trunc(99.26));
+
+// floor method should use instead trunc because it's always show accurate result
+console.log(Math.trunc(-99.26));
+console.log(Math.floor(-99.26));
+
+console.log(Math.floor(Math.random() * 6) + 1);
+
+const randInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
+
+console.log(randInt(10, 20));
+console.log(randInt(0, 3));
+
+// Rounding Decimals
+console.log((2.5).toFixed());
+console.log((2.7).toFixed(3));
+console.log(+(2.345).toFixed(2));
+
+// Remainder Oeperator
+console.log(5 % 2);
+console.log(5 / 2); // 5 = 2 * 2 + 1
+
+console.log(8 % 3);
+console.log(8 / 3); // 8 = 3 * 2 + 2
+
+const isEven = n => n % 2 === 0;
+console.log(isEven(8));
+console.log(isEven(5));
+console.log(isEven(0));
+
+labelBalance.addEventListener('click', function () {
+  [...document.querySelectorAll('.movements__row')].forEach((row, i) => {
+    // 0,2,4,6
+    if (i % 2 === 0) row.style.backgroundColor = 'orangeRed';
+    // 0,3,6,9
+    if (i % 3 === 0) row.style.backgroundColor = 'blue';
+  });
+});
+
+```
+
+## Smooth Scrolling
+
+```
+
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+const section1 = document.querySelector('#section--1');
+
+btnScrollTo.addEventListener('click', function (e) {
+  // const s1coords = section1.getBoundingClientRect();
+  // console.log('section 1 >>>', s1coords);
+
+  // console.log(e.target.getBoundingClientRect());
+
+  // window.scrollTo({
+  //   top: top + s1coords,
+  //   left: left + s1coords,
+  // });
+
+  // It will give current scroll position from veiport top to document top position
+  // console.log('current scroll X/Y', window.scrollX, window.scrollY);
+
+  // It will give current viewport height and width from the selection
+  // console.log(
+  //   'Viewport height and width',
+  //   document.documentElement.clientHeight,
+  //   document.documentElement.clientWidth
+  // );
+
+  // Scrolling
+  // Old way
+  /* window.scrollTo({
+    left: s1coords.left + window.scrollX,
+    top: s1coords.top + window.scrollY,
+    behavior: 'smooth',
+  }); */
+
+  // New way of scrolling
+  section1.scrollIntoView({
+    behavior: 'smooth',
+  });
+});
+```
