@@ -12,6 +12,32 @@
   **For Bold Text**
 ```
 
+# Important git command
+
+1. Go to the last commit while current changes are not committed
+
+```
+git reset --hard HEAD
+```
+
+2. Go to the last commit while current changes are committed
+
+```
+git log
+```
+
+- Copy the last commit id
+
+- Press q for exit, sometimes need :q
+
+```
+git reset --hard commit-id
+```
+
+3. For all git command visit -
+
+- https://education.github.com/git-cheat-sheet-education.pdf
+
 ## Javascript Basic
 
 ### Multiline JS Comment
