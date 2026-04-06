@@ -22,6 +22,10 @@ Enter Text Here
 ------------------------------/*/
 ```
 
+# Important things to remember all time
+
+- Google Sheet - https://docs.google.com/spreadsheets/d/1ZCwzFCt08T9kfi34s8uGMd2XiORG6_oOPNnQdFGG4lM/edit?gid=0#gid=0
+
 ### Home
 
 - JavaScript is the world's most popular programming language.
@@ -1587,7 +1591,6 @@ let iterate = asyncIterable[Symbol.asyncIterator]();
 ![image](https://user-images.githubusercontent.com/45126545/197379490-37fa5ce5-f4ce-4fc1-9e46-e0070575e044.png)
 
 - Main four types of `node item`:
-
   - Element node
   - Text node
   - Attribute node
@@ -1646,7 +1649,6 @@ console.log(listFirstItem);
 - `querySelector` can collect data from any node (element, text, attribute and comment node)
 
 - Main 4 types of `node item`:
-
   - Element node
   - Text node
   - Attribute node
